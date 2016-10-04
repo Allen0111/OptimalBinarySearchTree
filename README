@@ -1,0 +1,40 @@
+OptimalBinarySearchTree and all of its acccompanying files have been tested and proven to run succesful
+
+If using GUI:
+	A. Open a terminal using shortcut "Ctrl+Alt+t" or by finding the LXterminal in the menu.
+
+Steps to compile:
+	1. Change directories to where the OptimalBinarySearchTreeTest.java, OptimalBinarySearchTree.java, Node.java are located. by using "cd"	
+	2. Once you are in the directory, type:
+
+		javac OptimalBinarySearchTreeTest.java OptimalBinarySearchTree.java Node.java
+
+		OR
+
+		javac *.java
+
+Steps to run:
+	1. Due to the recursive nature of this algorithm, you will need to allocate a larger amount of memory to the JVM for large values ( greater than 1000 ).
+
+	EXAMPLES: 
+		the following example is a traditional run of QuickSortTest (note: you cannot exceed n = 8000 using this method)
+
+			java OptimalBinarySearchTreeTest
+
+		The following is an example of a traditional run for n > 1000
+
+			java -Xss256k -Xms128G OptimalBinarySearchTreeTest
+
+			-Xss256k - Xss<size> - sets the inital stack size 
+			-Xms256G - Xms<size> - sets the inital heap size
+			
+			Note: you will need to fluctuate these sizes according to your available resources. Also, since Java relies heavily on the use of dynamic allocation of objects, it is wise to begin with a large initial heap size.
+
+	2. The UI is very informative at each step of the program and will clearly give directions. However, please note that all input should be in the form of integer values, unless otherwise stated. if you choose to enter probabilities manually, it will ensure that the sum of all probabilities is 1, otherwise it will not execute.
+
+	3. outputs will be stored in a txt file. see OUTPUT section of this README for more information
+
+OUTPUT:
+	All output will be located in a file titled "OptimalBinarySearchTreeOutput.txt" which will be located in the same directory in which you compiled/ran the program. This file contains the runtime of the optimal binary search tree algorithm as well as printouts of the three matrices (e, r, w). When running the program, you will be given an option to choose whether or not to save a preorder traversal of the tree as well. This tree will only be printed when the user explicitly chooses the option.
+
+	Note: The time is calculated based on an average. The timer begins just before the call to optimalBST(). Timer ends upon return from the optimalBST() method call.
